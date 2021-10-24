@@ -1,0 +1,32 @@
+// подключение шрифтов с помощью gulp
+@mixin font($fontName, $fileName, $weight, $style) {
+   @font-face {
+      font-family: $fontName;
+      font-display: swap;
+      src: url('../fonts/#{$fileName}.woff') format('woff'), url('../fonts/#{$fileName}.woff2') format('woff2');
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+
+//Адаптивный шрифт
+@mixin adaptiv-font($minSize, $maxSize, $minWidth: 320, $maxWidth: $maxWidth) {
+   $addSize: $maxSize - $minSize;
+   @media (min-width: #{$maxWidth + px}) {
+      font-size: $maxSize + px;
+   }
+   @media (min-width: #{$minWidth + px}) and (max-width: #{$maxWidth + px}) {
+      font-size: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth}));
+   }
+}
+
+//Адаптивное свойство
+@mixin adaptiv-value($property, $minSize, $maxSize, $minWidth: 320, $maxWidth: $maxWidth) {
+   $addSize: $maxSize - $minSize;
+   @media (min-width: #{$maxWidth + px}) {
+      #{$property}: $maxSize + px;
+   }
+   @media (min-width: #{$minWidth + px}) and (max-width: #{$maxWidth + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth}));
+   }
+}
