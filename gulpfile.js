@@ -206,7 +206,10 @@ function spriteSvg () {
 }*/
 
 //обработка шрифтов
-function fonts () {                               // преобразование ttf в woff and woff2
+function fonts () {
+   src(sourceFolder + "/fonts/icon-fonts/*")
+      .pipe(dest(path.build.fonts + "/icon-fonts"));
+   // преобразование ttf в woff and woff2
    // преобразование otf в ttf
    src([sourceFolder + "/fonts/*.otf"])
       .pipe(

@@ -8,7 +8,418 @@
    <div class="wrapper">
       @@include('html/header.html',{})
       <main class="page">
-
+         <div class="page__control control-page">
+            <div class="control-page__content _container">
+               <div class="control-page__row">
+                  <button id="btn-grid" type="button" class="control-page__btn _active icon-tiles"><span class='_visualy-hidden'>tiles</span></button>
+                  <button id="btn-row" type="button" class="control-page__btn icon-rows"><span class='_visualy-hidden'>rows</span></button>
+               </div>
+            </div>
+         </div>
+         <section class="page__gallery gallery">
+            <div class="gallery__content _container">
+               <ul class="gallery__list _active" id="gallary-row-list">
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/01.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/02.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/03.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/04.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/05.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/06.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/07.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/08.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item">
+                     <div class="gallery__card card-gallery card-gallery_row">
+                        <a href="#" class="card-gallery__image card-gallery__image_row">
+                           <img src="./img/09.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_row">
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_row">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+               <ul class="gallery__list gallery__list_grid" id="gallary-grid-list">
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g1.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label ">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g2.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g3.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g4.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g5.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g6.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g7.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="gallery__item gallery__item_grid">
+                     <div class="gallery__card card-gallery card-gallery_grid">
+                        <a href="#" class="card-gallery__image card-gallery__image_grid">
+                           <img src="./img/g8.jpg" alt="girl">
+                        </a>
+                        <div class="card-gallery__info info-gallery info-gallery_grid">
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Today</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">128</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">128</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">9-08-2016</p>
+                              <a href="#" class="info-gallery__link icon-heart" aria-label="likes">67</a>
+                              <a href="#" class="info-gallery__link icon-message" aria-label="comments">22</a>
+                           </div>
+                           <div class="info-gallery__column info-gallery__column_grid">
+                              <p class="info-gallery__label">Image upload</p>
+                              <span class="info-gallery__text">11-04-2016</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+               <div class="gallery__button">
+                  <a href="#" type="button" class="gallery__btn">LOAD MORE</a>
+               </div>
+            </div>
+         </section>
+         <div class="bg-01"></div>
+         <div class="bg-02"></div>
       </main>
    </div>
    @@include('html/js.html',{})

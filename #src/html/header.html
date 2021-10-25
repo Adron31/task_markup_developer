@@ -1,5 +1,35 @@
 <header class="header">
    <div class="header__content _container">
-
+      <div class="header__logo">
+         <img src="./img/logo/logo.svg" alt="monblan" width="138" height="138">
+      </div>
+      <div class="header__info info-header">
+         <div class="info-header__row">
+            <h1 class="info-header__title title">monblanproject</h1>
+            <a class="info-header__link" href="#">Start on 17-02-2016</a>
+         </div>
+         <div class="info-header__row">
+            <p class="info-header__text"><b>870</b> posts</p>
+            <p class="info-header__text"><b>11,787</b> followers</p>
+            <p class="info-header__text"><b>112</b> following</p>
+         </div>
+         <div class="info-header__row">
+            <form novalidate class="info-header__datepicker datepicker-header" action="#">
+               <p class="datepicker-header__label">Date</p>
+               <div class="datepicker-header__body">
+                  <p class="datepicker-header__item">
+                     <label for="date-from" class="datepicker-header__icon icon-calendar"><span class='_visualy-hidden'>date from</span></label>
+                     <input class="datepicker-header__input" type="text" placeholder="From" id="date-from" autocomplete="off">
+                     <button type="button" class="datepicker-header__btn icon-cros"><span class="_visualy-hidden">reset</span></button>
+                  </p>
+                  <p class="datepicker-header__item">
+                     <label for="date-to" class="datepicker-header__icon icon-calendar"><span class='_visualy-hidden'>date to</span></label>
+                     <input class="datepicker-header__input" type="text" placeholder="To" id="date-to" autocomplete="off">
+                     <button type="button" class="datepicker-header__btn icon-cros"><span class="_visualy-hidden">reset</span></button>
+                  </p>
+               </div>
+            </form>
+         </div>
+      </div>
    </div>
 </header>

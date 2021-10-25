@@ -3,9 +3,9 @@
 @import 'mixin';
 @import 'var';
 //------------------------------------------------------------------------
-
+//==ICON-FONTS==========================================================
+@import 'icon-fonts';
 //==FONTS=================================================================
-//&display=swap&subset=cyrillic-ext
 @import 'fonts';
 //------------------------------------------------------------------------
 
@@ -22,12 +22,14 @@ body {
 
 a:focus,
 button:focus {
-   outline: 1px auto $mainColor;
+   //outline: 1px auto $mainColor;
 }
 // ----------------------------------------------------------------------
 
 //==MAIN WRAPPER=========================================================
 .wrapper {
+   display: flex;
+   flex-direction: column;
    position: relative;
    width: 100%;
    min-height: 100%;
@@ -45,12 +47,9 @@ button:focus {
 
 //==IMPORTS=============================================================
 //==IMPORT FORMS & UI SLYLE=============================================
-@import 'swiper';
-@import 'forms';
-@import 'decoration-element';
+@import 'datepicker';
 //==IMPORT PAGES STYLE & PAGE ELEMENTS STYLE
 @import 'header';
-@import 'footer';
 //---------------------------------------------------------------------
 //=====================================================================
 //==GENERAL CLASSES
@@ -61,4 +60,301 @@ button:focus {
    width: 1px;
    height: 1px;
    margin: -1px;
+}
+
+.bg-01 {
+   position: absolute;
+   z-index: 2;
+   margin-right: 52%;
+   top: 0;
+   right: 0;
+   min-width: 689px;
+   width: 50vw;
+   min-height: 482px;
+   height: 40vw;
+   background: url('../img/bg-1.png') 0 0 / contain no-repeat;
+   @media (max-width: 1550px) {
+      margin-right: 53%;
+   }
+   @media (max-width: $md3 + px) {
+      margin-right: 43%;
+   }
+}
+.bg-02 {
+   position: absolute;
+   z-index: 2;
+   margin-left: 85%;
+   bottom: 40px;
+   left: 0;
+   min-width: 315px;
+   width: 23vw;
+   min-height: 368px;
+   height: 26vw;
+   background: url('../img/bg-2.png') 0 0 / contain no-repeat;
+}
+
+.page {
+   flex: 1 1 auto;
+   background-color: #e5e5e5;
+
+   // .page__control
+   &__control {
+      position: relative;
+      z-index: 3;
+   }
+   // .page__gallery
+   &__gallery {
+      position: relative;
+      z-index: 3;
+   }
+}
+
+.control-page {
+   // .control-page__content
+   &__content {
+   }
+   // .control-page__row
+   &__row {
+      padding: 18px 0 22px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+   }
+   // .control-page__btn
+   &__btn {
+      cursor: auto;
+      &::before {
+         transition: all 0.3s ease 0s;
+         font-size: 24px;
+         color: #c8c7c7;
+      }
+      &._active {
+         cursor: pointer;
+         &::before {
+            color: #3d8eda;
+         }
+      }
+   }
+}
+
+.gallery {
+   // .gallery__content
+   &__content {
+   }
+   // .gallery__list
+   &__list {
+      margin-bottom: 30px;
+      width: 100%;
+      display: none;
+      &._active {
+         display: block;
+      }
+      &_grid {
+         flex-wrap: wrap;
+         align-items: stretch;
+         &._active {
+            display: flex;
+            justify-content: center;
+         }
+      }
+   }
+   // .gallery__item
+   &__item {
+      width: 100%;
+      padding: 4px 0;
+      &_grid {
+         padding: 4px;
+         flex: 0 1 25%;
+         width: 25%;
+         @media (max-width: $md0 + px) {
+            flex: 0 1 30%;
+            width: 30%;
+         }
+         @media (max-width: $md1 + px) {
+            flex: 0 1 33.3%;
+            width: 33.3%;
+         }
+         @media (max-width: $md2 + px) {
+            flex: 0 1 50%;
+            width: 50%;
+         }
+         @media (max-width: $md3 + px) {
+            flex: 0 1 65%;
+            width: 65%;
+         }
+         @media (max-width: $md3 + px) {
+            flex: 0 1 100%;
+            width: 100%;
+         }
+      }
+   }
+   // .gallery__card
+   &__card {
+      width: 100%;
+   }
+   // .gallery__button
+   &__button {
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   // .gallery__btn
+   &__btn {
+      padding: 8px 26px 7px;
+      display: block;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 1;
+      color: #929292;
+      letter-spacing: -0.03em;
+      border: 1px solid #929292;
+      border-radius: 14px;
+      transition: all 0.3s ease 0s;
+      @media (hover) {
+         &:hover {
+            color: #3d8eda;
+            border: 1px solid #3d8eda;
+         }
+      }
+   }
+}
+
+.card-gallery {
+   &_row {
+      display: flex;
+      align-items: stretch;
+   }
+   background-color: #fff;
+   // .card-gallery__image
+   &__image {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      &_row {
+         padding-bottom: 0;
+         flex: 0 0 86px;
+         width: 86px;
+         @media (max-width: $md4 + px) {
+            flex: 0 0 40%;
+         }
+      }
+      img {
+         object-fit: cover;
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+      }
+   }
+   // .card-gallery__info
+   &__info {
+      flex: 1 1 auto;
+   }
+}
+
+.info-gallery {
+   display: flex;
+   &_row {
+      padding: 15px 80px 15px 30px;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: $md2 + px) {
+         padding: 15px;
+      }
+      @media (max-width: $md3 + px) {
+         flex-wrap: wrap;
+      }
+   }
+   &_grid {
+      padding: 12px;
+      flex-wrap: wrap;
+      @media (max-width: $md2 + px) {
+         gap: 10px;
+      }
+   }
+   // .info-gallery__column
+   &__column {
+      &_row {
+         flex: 0 1 auto;
+         @media (max-width: $md3 + px) {
+            margin-bottom: 10px;
+            flex: 0 1 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            .info-gallery__label {
+               margin: 0 10px 0 0;
+            }
+         }
+      }
+      &_grid {
+         flex: 0 0 50%;
+         margin-bottom: 20px;
+         @media (max-width: $md2 + px) {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+            .info-gallery__label {
+               font-size: 14;
+               margin-right: 15px;
+            }
+         }
+         @media (max-width: $md4 + px) {
+            .info-gallery__label {
+               flex: 1 1 auto;
+            }
+         }
+         &:last-child {
+            flex: 1 0 100%;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .info-gallery__label {
+               font-size: 14;
+            }
+            .info-gallery__text {
+               font-size: 12;
+            }
+         }
+      }
+   }
+   // .info-gallery__label
+   &__label {
+      margin-bottom: 5px;
+      font-weight: 500;
+      font-size: 16px;
+      @include adaptiv-font(14, 16);
+      line-height: 1.1em;
+      color: inherit;
+      @media (max-width: $md4 + px) {
+         flex: 0 0 100%;
+         line-height: 1.5;
+      }
+   }
+   // .info-gallery__link
+   &__link {
+      margin-right: 18px;
+      font-weight: 500;
+      font-size: 14px;
+      @include adaptiv-font(13, 14);
+      line-height: 1.1em;
+      color: inherit;
+      &::before {
+         margin-right: 7px;
+         color: #000;
+      }
+   }
+   // .info-gallery__text
+   &__text {
+      font-weight: 500;
+      font-size: 14px;
+      @include adaptiv-font(12, 14);
+      line-height: 1.1em;
+   }
 }

@@ -1,4 +1,4 @@
 "use strict";
 
-@@include('files/forms.js', {})
+@@include('files/datepicker.js', {})
 @@include('files/script.js', {})

@@ -1,0 +1,63 @@
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot') format('embedded-opentype'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf') format('truetype'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff') format('woff'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar {
+  &:before {
+    content: $icon-calendar;
+    color: #5f5f5f;
+  }
+}
+.icon-cros {
+  &:before {
+    content: $icon-cros;
+    color: #5f5f5f;
+  }
+}
+.icon-duble-arrow {
+  &:before {
+    content: $icon-duble-arrow;
+  }
+}
+.icon-heart {
+  &:before {
+    content: $icon-heart;
+  }
+}
+.icon-message {
+  &:before {
+    content: $icon-message;
+  }
+}
+.icon-rows {
+  &:before {
+    content: $icon-rows;
+    color: #c8c7c7;
+  }
+}
+.icon-tiles {
+  &:before {
+    content: $icon-tiles;
+  }
+}

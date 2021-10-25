@@ -1,0 +1,371 @@
+$width: 200px;
+$radius: $width * 0.016891;
+$transition: 0.3s;
+$font-size: $width * 0.056;
+$lightblue: lightblue;
+
+/*
+  All a user has to do to change the calendar size is
+  change the font-size on the container and everything
+  magically resizes accordingly. Relative units ftw!
+*/
+.qs-datepicker-container {
+  padding: 10px 0 0;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: black;
+  margin-top: 2px;
+  margin-left: -2px;
+  position: absolute;
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  z-index: 9001;
+  user-select: none;
+  border: 1px solid #d2d1d2;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06) rgba(0, 0, 0, 0.3);
+  * {
+    box-sizing: border-box;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translate(0, -30%) rotate(45deg);
+    background-color: #fff;
+    border-top: 1px solid #d2d1d2;
+    border-left: 1px solid #d2d1d2;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    background-color: #fff;
+    z-index: -1;
+  }
+}
+
+.qs-centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.qs-hidden {
+  display: none;
+}
+
+.qs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity $transition;
+  display: flex;
+  flex-direction: column;
+
+  &.qs-hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .qs-overlay-year {
+    // Overlay year input element.
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    color: white;
+    font-size: $font-size;
+    padding: 0.25em 0;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+
+    // https://goo.gl/oUuGkG
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  .qs-close {
+    padding: 0.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .qs-submit {
+    border: 1px solid white;
+    border-radius: $radius;
+    padding: 0.5em;
+    margin: 0 auto auto;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.4);
+
+    &.qs-disabled {
+      color: gray;
+      border-color: gray;
+      cursor: not-allowed;
+    }
+  }
+
+  .qs-overlay-month-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  .qs-overlay-month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity $transition / 2;
+
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.qs-controls {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  filter: blur(0px);
+  transition: filter $transition;
+
+  &.qs-blur {
+    filter: blur(5px);
+  }
+}
+
+.qs-arrow {
+  height: $width / 10;
+  width: $width / 7;
+  position: relative;
+  cursor: pointer;
+  border-radius: $radius;
+  transition: background 0.15s;
+
+  &:hover {
+    &.qs-left:after {
+      //border-right-color: black;
+    }
+
+    &.qs-right:after {
+      //border-left-color: black;
+    }
+
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &:after {
+    content: $icon-duble-arrow;
+    display: block;
+    font-family: 'icomoon';
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transition: border 0.2s;
+  }
+
+  &.qs-left:after {
+    border-right-color: gray;
+    left: 10px;
+    transform: translate(0, -50%) rotateY(180deg);
+  }
+
+  &.qs-right:after {
+    border-left-color: gray;
+    right: 10px;
+    transform: translate(0, -50%);
+  }
+}
+
+.qs-month-year {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1em;
+  transition: border 0.2s;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid gray;
+  }
+
+  &:focus,
+  &:active:focus {
+    outline: none;
+  }
+}
+
+.qs-month {
+  padding-right: 0.5ex;
+}
+
+.qs-year {
+  padding-left: 0.5ex;
+}
+
+.qs-squares {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 9px 9px;
+  filter: blur(0px);
+  transition: filter $transition;
+  &.qs-blur {
+    filter: blur(5px);
+  }
+}
+
+.Su {
+  background: #f4f4f4;
+  border: 2px solid #fff;
+}
+
+.qs-square {
+  width: calc(100% / 7);
+  height: $width / 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.1s;
+
+  // Overriden for date-range dates below.
+  border-radius: $radius;
+
+  &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active) {
+    &:hover {
+      background: $lightblue;
+    }
+  }
+}
+
+// Today's date
+.qs-current {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*
+  3 possibilities:
+    1. Single, active date.
+    2. Daterange start selection.
+    3. Daterange end selection.
+*/
+.qs-active,
+.qs-range-start,
+.qs-range-end {
+  background: #3d8eda;
+}
+
+// Daterange start selection.
+.qs-range-start {
+  &:not(.qs-range-6) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+// Daterange middle selections.
+.qs-range-middle {
+  background: lighten($lightblue, 10%);
+
+  &:not(.qs-range-0):not(.qs-range-6) {
+    border-radius: 0;
+  }
+
+  &.qs-range-0 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &.qs-range-6 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// Daterange end selection.
+.qs-range-end {
+  &:not(.qs-range-0) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.qs-disabled,
+.qs-outside-current-month {
+  opacity: 0.2;
+}
+
+.qs-disabled {
+  cursor: not-allowed;
+}
+
+.qs-empty {
+  cursor: default;
+}
+
+.qs-day {
+  cursor: default;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15 / 13 + em;
+  color: #000;
+}
+.qs-num {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15 / 13 + em;
+  color: #333437;
+}
+.qs-current {
+  font-weight: 700;
+}
+
+.qs-event {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: $width * 0.03;
+    height: $width * 0.03;
+    border-radius: 50%;
+    background: #07f;
+    bottom: 0;
+    right: 0;
+  }
+}

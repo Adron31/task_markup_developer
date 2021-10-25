@@ -1,33 +1,40 @@
 //========Fonts==============================
 //default prime====================================
-$fontFamilyPrime: Roboto, Arial, sans-serif;
-$fontSizePrime: 15px;
+$fontFamilyPrime: Roboto, sans-serif;
+$fontSizePrime: 16px;
 $lineHeightPrime: 1.1;
 $fontWeightPrime: 400;
-$fontColorPrime: #5e5858;
+$fontColorPrime: #000;
 //fonts-family
-$fontFamilyTitle: Overpass, sans-serif;
-$fontFamilyFooter: Poppins, sans-serif;
+$fontFamilyTitle: Montserrat, sans-serif;
 
 //font-size
-$fzTitle: 60;
-$fzSubtitle: 24;
+$fzTitle: 24;
 
 // color=============================================
-$generalColor: #5e5858;
-$mainColor: #c04ae2;
-$titleColor: #111111;
+$mainColorBg: #e5e5e5;
+$linkColor: #3d8eda;
+$fontColorTitle: #000;
 
 //----------------------------------------------------
 
 // =======Max/Min width & Breackpoints================
 $minWidth: 320;
 $maxWidth: 1920;
-$maxWidthContainer: 1170;
+$maxWidthContainer: 840;
 $md0: $maxWidthContainer + 30;
-$md1: 1067.98;
-$md2: 967.98;
-$md3: 767.98;
-$md4: 659.98;
-$md5: 479.98;
+$md1: 767.98;
+$md2: 659.98;
+$md3: 559.98;
+$md4: 389.98;
 //-----------------------------------------------------
+//iconmoon==========================================
+$icomoon-font-family: 'icomoon' !default;
+$icomoon-font-path: '../fonts/icon-fonts' !default;
+$icon-calendar: '\e900';
+$icon-cros: '\e901';
+$icon-duble-arrow: '\e902';
+$icon-heart: '\e903';
+$icon-message: '\e904';
+$icon-rows: '\e905';
+$icon-tiles: '\e906';
